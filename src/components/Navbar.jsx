@@ -1,40 +1,55 @@
 import React from 'react'
 import CartWidget from './CartWidget'
-import Dropdown from 'react-bootstrap/Dropdown';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Stack from 'react-bootstrap/Stack';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 
-const Navbar = () => {
+const Navbaar = () => {
     return (
         <div className='nav'>
+
             <Stack direction="horizontal" gap={3}>
                 <div className="p-2">
-                  {/* Brand */}
-            <h1>ROCKIANDO SPORT </h1>
+                    {/* Brand */}
+                    <div className='logo'>
+                        <h1>ROCKIANDO SPORT </h1>
+                    </div>
                 </div>
                 <div className="p-2 ms-auto">
-                <DropdownButton
-                align="end"
-                title="Categorias"
-                id="dropdown-menu-align-end"
-            >
-                <Dropdown.Item eventKey="1">Todo los productos</Dropdown.Item>
-                <Dropdown.Item eventKey="2">Femenino</Dropdown.Item>
-                <Dropdown.Item eventKey="3">Masculino</Dropdown.Item>
+                    <div className='menu'>
+                        <div className="p-2 ms-auto">
+                            <Navbar expand="lg" className="bg-body-tertiary">
+                                <Container>
+                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                    <Navbar.Collapse id="basic-navbar-nav">
+                                        <Nav className="me-auto">
+                                            <Nav.Link >Nosotros</Nav.Link>
+                                            <Nav.Link >Entregas</Nav.Link>
+                                            <NavDropdown title="Categorias" id="basic-nav-dropdown" >
+                                                <NavDropdown.Item className='item' >Femenino</NavDropdown.Item>
+                                                <NavDropdown.Item className='item'>  Masculino </NavDropdown.Item>
+                                                <NavDropdown.Item className='item'>Accesorios</NavDropdown.Item>
+                                                <NavDropdown.Divider />
+                                                <NavDropdown.Item className='item'>Todos los productos </NavDropdown.Item>
+                                            </NavDropdown>
+                                        </Nav>
+                                    </Navbar.Collapse>
+                                </Container>
+                            </Navbar>
+                        </div>
+                    </div>
 
-            </DropdownButton>
                 </div>
-                <div className="vr" />
                 <div className="p-2">
-                      {/* Carrito */}
-                <CartWidget />
+                    {/* Carrito */}
+                    <CartWidget />
                 </div>
             </Stack>
-
-
         </div>
 
     )
 }
 
-export default Navbar
+export default Navbaar

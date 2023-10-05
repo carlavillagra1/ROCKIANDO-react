@@ -1,26 +1,37 @@
-.p-2{
-  margin: 10px;
-  padding: 10px;
-
-
-}
 
 
 .nav{
-  background: rgb(19, 3, 75);
-  align-items: center;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-}
-h1{
-  color: aliceblue;
-}
-body{
-  margin: 0;
+  justify-content: space-evenly;
+  background: whitesmoke;
 
 }
+h1{
+  color: rgb(41, 136, 220);
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+
 .ms-auto button{
-  background: rgb(25, 25, 87);
+  background: none;
+  border: 2px solid  white;
+}
+
+.logo{
+  padding: 10px;
+  
+}
+
+.menu{
+  font-weight: bold;
+  
+
+
+}
+.itemlist{
+  background: red;
+  display: flex;
+  justify-content: center;
 }
