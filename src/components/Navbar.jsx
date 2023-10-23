@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Stack from 'react-bootstrap/Stack';
-
+import { Link } from 'react-router-dom';
 const Navbaar = () => {
     return (
         <div className='nav'>
@@ -13,8 +13,10 @@ const Navbaar = () => {
             <Stack direction="horizontal" gap={3}>
                 <div className="p-2">
                     {/* Brand */}
-                    <div className='logo'>
+                    <div>
+                        <Link to={"/"} className='logo'>
                         <h1>ROCKIANDO SPORT </h1>
+                        </Link>
                     </div>
                 </div>
                 <div className="p-2 ms-auto">
@@ -27,12 +29,12 @@ const Navbaar = () => {
                                         <Nav className="me-auto">
                                             <Nav.Link >Nosotros</Nav.Link>
                                             <Nav.Link >Entregas</Nav.Link>
-                                            <NavDropdown title="Categorias" id="basic-nav-dropdown" >
-                                                <NavDropdown.Item className='item' >Femenino</NavDropdown.Item>
-                                                <NavDropdown.Item className='item'>  Masculino </NavDropdown.Item>
-                                                <NavDropdown.Item className='item'>Accesorios</NavDropdown.Item>
+                                            <NavDropdown  className='categoria' title="Categorias" id="basic-nav-dropdown" >
+                                                <NavDropdown.Item className='item' > <Link to={`./categoria/${'Mujer'}`}> Mujer </Link></NavDropdown.Item>
+                                                <NavDropdown.Item className='item'> <Link to={`/categoria/${'Hombre'}`}> Hombre</Link></NavDropdown.Item>
+                                                <NavDropdown.Item className='item'> <Link to={`/categoria/${'Accesorios'}`}>Accesorios </Link> </NavDropdown.Item>
                                                 <NavDropdown.Divider />
-                                                <NavDropdown.Item className='item'>Todos los productos </NavDropdown.Item>
+                                                <NavDropdown.Item className='item'> <Link to={"/"}> Todos los productos</Link> </NavDropdown.Item>
                                             </NavDropdown>
                                         </Nav>
                                     </Navbar.Collapse>

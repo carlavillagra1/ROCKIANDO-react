@@ -1,4 +1,4 @@
-
+/*navbar*/
 
 .nav{
   margin: 0;
@@ -16,22 +16,174 @@ h1{
 
 .ms-auto button{
   background: none;
-  border: 2px solid  white;
-}
-
-.logo{
-  padding: 10px;
   
 }
+
+.NavDropdown {
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
+}
+.logo{
+  padding: 10px;
+  text-decoration: none;
+  
+}
+
 
 .menu{
   font-weight: bold;
   
-
-
 }
-.itemlist{
-  background: red;
+
+.item{
+  padding: 10px;
+  color: rgb(59, 35, 147);
+  font-weight: bold;
+  margin: 0;
+}
+.btnCarrito{
+  background: none ;
+  border: none;
+}
+.btnCarrito:hover{
+background: none;
+}
+.cantidadCarrito{
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
+}
+/*CONTNEDOR DEL CONTADOR - ITEMCOUNT*/
+.contenedor{
   display: flex;
   justify-content: center;
+}
+.contador{
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.contador h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+.contador button{
+  width: 100px;
+  background-color: antiquewhite;
+  font-size: 20px;
+  font-weight: bolder;
+  color: gray;
+  border: 2px solid rgb(18, 21, 207);
+  border-radius: 5px;
+}
+.contador .btnAgregar{
+  width: 200px;
+  font-size: 13px;
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue);
+  color: antiquewhite;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+
+}
+
+/*Itemlistcontainer*/
+.ItemList{
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+  height: 70vh;
+}
+
+/*Item - cards */
+.contenedorCards{
+  background-color: whitesmoke;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+ .cards{
+  background: rgb(249, 245, 237);
+  width: 240px;
+  height: 300px;
+  border: 2px solid rgb(18, 21, 207);
+  align-items: center;
+  text-align: center;
+  
+  
+}
+.cajitas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.button{
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
+  border: none;
+  color: whitesmoke;
+  font-weight: bold;
+  transition: all 2s;
+}
+.buttonL{
+  color: whitesmoke;
+  text-decoration: none;
+  background: none;
+}
+.button:hover{
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
+}
+.imgItem{
+  margin: 10px;
+  width: 140px;
+  height: 170px;
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
+
+}
+
+/*ItemDetils*/
+.contenedorDetail{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.cardsDetail{
+  background: white;
+  width: 400px;
+  height: 550px;
+  border: 3px solid rgb(18, 21, 207);
+  align-items: center;
+  text-align: center;
+
+}
+.img{
+  margin: 10px;
+  width: 250px;
+  height: 340px;
+  background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
+}
+.tittle{
+  font-weight: bolder;
+  color: rgb(2, 2, 100);
+  
+}
+.talle{
+  font-weight: 600;
+  font-size: 17px;
+  padding: 6px;
+}
+.descripcion{
+  font-size: 17px;
+  font-weight: 600;
+  padding: 6px;
+}
+.precio{
+  font-size: 18px;
+  font-weight: bold;
 }
