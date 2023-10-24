@@ -12,12 +12,12 @@ const ItemList = ({ productos }) => {
 
                     return (
                         <Item
-                            id={p?.id}
-                            key={p?.id}
-                            nombre={p?.nombre}
-                            descripcion={p?.descripcion}
-                            categoria={p?.categoria}
-                            precio={p?.precio}
+                            id={p.id}
+                            key={p.id}
+                            nombre={p.nombre}
+                            descripcion={p.descripcion}
+                            categoria={p.categoria}
+                            precio={p.precio}
                         />
 
                     )

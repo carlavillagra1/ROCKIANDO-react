@@ -30,11 +30,11 @@ const Navbaar = () => {
                                             <Nav.Link >Nosotros</Nav.Link>
                                             <Nav.Link >Entregas</Nav.Link>
                                             <NavDropdown  className='categoria' title="Categorias" id="basic-nav-dropdown" >
-                                                <NavDropdown.Item className='item' > <Link to={`./categoria/${'Mujer'}`}> Mujer </Link></NavDropdown.Item>
-                                                <NavDropdown.Item className='item'> <Link to={`/categoria/${'Hombre'}`}> Hombre</Link></NavDropdown.Item>
-                                                <NavDropdown.Item className='item'> <Link to={`/categoria/${'Accesorios'}`}>Accesorios </Link> </NavDropdown.Item>
+                                                <NavDropdown.Item className='item' > <Link to={`/categoria/${'mujer'}`} className='item'> Mujer </Link></NavDropdown.Item>
+                                                <NavDropdown.Item className='item'> <Link to={`/categoria/${'hombre'}`} className='item'> Hombre</Link></NavDropdown.Item>
+                                                <NavDropdown.Item className='item'> <Link to={`/categoria/${'accesorios'}`} className='item'>Accesorios </Link> </NavDropdown.Item>
                                                 <NavDropdown.Divider />
-                                                <NavDropdown.Item className='item'> <Link to={"/"}> Todos los productos</Link> </NavDropdown.Item>
+                                                <NavDropdown.Item className='item'> <Link to={"/"} className='item'> Todos los productos</Link> </NavDropdown.Item>
                                             </NavDropdown>
                                         </Nav>
                                     </Navbar.Collapse>

@@ -39,6 +39,7 @@ h1{
   color: rgb(59, 35, 147);
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
 }
 .btnCarrito{
   background: none ;
@@ -156,7 +157,7 @@ background: none;
 .cardsDetail{
   background: white;
   width: 400px;
-  height: 550px;
+  height: 460px;
   border: 3px solid rgb(18, 21, 207);
   align-items: center;
   text-align: center;
@@ -164,7 +165,7 @@ background: none;
 }
 .img{
   margin: 10px;
-  width: 250px;
+  width: 200px;
   height: 340px;
   background: linear-gradient( to right, rgb(109, 131, 202), rgb(59, 35, 147), blue) ;
 }
