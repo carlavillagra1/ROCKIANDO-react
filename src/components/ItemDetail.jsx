@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount';
+import { CartContext } from '../context/CartContext';
 
 
 const ItemDetail = ({ productos }) => {
+    const [cantidad, setCantidad] = useState(0)
 
+    const { agregarAlCarrito} = useContext(CartContext)
+
+    const agregarCantidad = (cantidad) =>{
+        setCantidad(cantidad)
+
+        const item = {
+            id, nombre, precio
+        }
+        agregarAlCarrito(item, cantidad)
+    }
     const { id } = useParams()
 
     const filterProductos = productos.filter((productos) => productos.id == id)
+
 
 
     return (

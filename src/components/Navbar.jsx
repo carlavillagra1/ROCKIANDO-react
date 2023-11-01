@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Stack from 'react-bootstrap/Stack';
 import { Link } from 'react-router-dom';
 const Navbaar = () => {
+
     return (
         <div className='nav'>
 
