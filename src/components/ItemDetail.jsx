@@ -1,60 +1,41 @@
 import React, { useContext, useState } from 'react'
 import Card from 'react-bootstrap/Card';
-import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount';
 import { CartContext } from '../context/CartContext';
 
+const ItemDetail = ({ productos}) => {
 
-const ItemDetail = ({ productos }) => {
-    const [cantidad, setCantidad] = useState(0)
+    console.log(productos)
 
-    const { agregarAlCarrito} = useContext(CartContext)
-
-    const agregarCantidad = (cantidad) =>{
-        setCantidad(cantidad)
-
-        const item = {
-            id, nombre, precio
-        }
-        agregarAlCarrito(item, cantidad)
-    }
-    const { id } = useParams()
-
-    const filterProductos = productos.filter((productos) => productos.id == id)
-
-
-
+    const { agregarAlCarrito, cantidad, isInCart} = useContext(CartContext)
     return (
         <>
-            {
-
-                filterProductos.map((p) => {
-                    return (
                         <div className='contenedorDetail'>
                             <div >
                                 <Card className='cardsDetail'>
-                                    <h3 className='img'>IMAGEN</h3>
+                                <img className='imgItem'src={productos.imagen} />
                                     <Card.Body>
-                                        <Card.Title className='tittle'>{p.nombre}</Card.Title>
+                                        <Card.Title className='tittle'>{productos.nombre}</Card.Title>
                                         <Card.Text className='talle'>
-                                            Talle: {p.talle}
+                                            Talle: {productos.talle}
                                         </Card.Text>
                                         <Card.Text className='descripcion'>
-                                            Descripcion:  {p.descripcion}
+                                            Descripcion:  {productos.descripcion}
                                         </Card.Text>
                                         <Card.Text className='precio'>
-                                            Precio: ${p.precio}
+                                            Precio: ${productos.precio}
                                         </Card.Text>
                                     </Card.Body>
                                     <ItemCount />
+                                    <button  onClick={()=>{agregarAlCarrito(productos, cantidad)}}  className='btnAgregar' 
+                                    > { isInCart(productos.id) ? "Producto agregado" : "Agregar al carrito"}
+                                    </button> 
                                 </Card>
                             </div>
                         </div>
 
-                    )
-
-                })
-            }
+                
+            
 
 
 

@@ -20,6 +20,10 @@ const Navbaar = () => {
                         </Link>
                     </div>
                 </div>
+                <div className="p-2">
+                    {/* Carrito */}
+                    <CartWidget />
+                </div>
                 <div className="p-2 ms-auto">
                     <div className='menu'>
                         <div className="p-2 ms-auto">
@@ -28,8 +32,8 @@ const Navbaar = () => {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav className="me-auto">
-                                            <Nav.Link >Nosotros</Nav.Link>
-                                            <Nav.Link >Entregas</Nav.Link>
+                                            <Nav.Link > <Link to={"/nosotros"} className='item'> Nosotros </Link></Nav.Link>
+                                            <Nav.Link > <Link to={"/entregas"} className='item'> Entregas</Link></Nav.Link>
                                             <NavDropdown  className='categoria' title="Categorias" id="basic-nav-dropdown" >
                                                 <NavDropdown.Item className='item' > <Link to={`/categoria/${'mujer'}`} className='item'> Mujer </Link></NavDropdown.Item>
                                                 <NavDropdown.Item className='item'> <Link to={`/categoria/${'hombre'}`} className='item'> Hombre</Link></NavDropdown.Item>
@@ -44,10 +48,6 @@ const Navbaar = () => {
                         </div>
                     </div>
 
-                </div>
-                <div className="p-2">
-                    {/* Carrito */}
-                    <CartWidget />
                 </div>
             </Stack>
         </div>

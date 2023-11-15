@@ -3,19 +3,19 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-const Item = ({nombre, precio, id }) => {
+const Item = ({nombre, precio, id, imagen}) => {
     return (
-        <div className='contenedorCards'> 
-            <div >
+        <div className='cajitas'> 
+            <div className='itemscard' >
             <Card className='cards'>
-            <h3 className='imgItem'>IMAGEN</h3>
+                <img className='imgItem'src={imagen} />
                 <Card.Body>
                     <Card.Title className='tittle'>{nombre}</Card.Title>
                     <Card.Text className='precio'>
                         ${precio}
                     </Card.Text>
                     <Button className='button' variant="primary">
-                    <Link to={`/product/${id}`} className='buttonL'>
+                    <Link to={`/producto/${id}`} className='buttonL'>
                         Ver detalles
                         </Link>
                         </Button>
